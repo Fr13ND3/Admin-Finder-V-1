@@ -9,7 +9,7 @@ HOW USE PROGRAMER :
 	or
 	python main.py -h
 	
-Please Join Telegram Channel : @Arch_TM And Please Fork Project Not Copy Paste
+Please Join Telegram Channel : @Arch_TM And # Please Fork Project Not Copy Paste
 
 Thank You !
 
