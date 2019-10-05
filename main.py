@@ -28,14 +28,24 @@ def main():
                 Target = argv[2]
                 if "https://" in Target:
                     Target = Target.replace('https://','http://')
+                elif "www." not in Target and "http://" not in Target:
+                    Target = "http://www." + Target
+                
                 elif "http://" not in Target:
                     Target = "http://" + Target
-                elif "/" not in Target.endswith():
-                    Target = Target + "/"
+                elif "www." not in Target:
+                    Target = Target[0:7] + "www." + Target[7:]
+
+                if Target.endswith('/'):
+                    pass
+                else:
+                   Target = Target + "/"
+
                 try:
                     test_req = get(Target)
                     if test_req.status_code == 200:
                         finder.Find_admin_page(Target)
+                        pass
                     else:
                         printer.printer_connection_failed()
                 except Exception:
