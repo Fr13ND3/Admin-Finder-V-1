@@ -896,6 +896,7 @@ def Find_admin_page(u_target):
     try:
         for list_worlds in list_address_page:
             try:
+                target = u_target + list_worlds
                 req = get(target)
                 if req.status_code == 200:
                     print(printer.printer_found_page(target))
